@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31402.337
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RIH-GameLogic", "RIH-GameLogic\RIH-GameLogic.csproj", "{6C740FF7-736F-4E70-B1A7-FCCEB8D9EAC0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6C740FF7-736F-4E70-B1A7-FCCEB8D9EAC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C740FF7-736F-4E70-B1A7-FCCEB8D9EAC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C740FF7-736F-4E70-B1A7-FCCEB8D9EAC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C740FF7-736F-4E70-B1A7-FCCEB8D9EAC0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0D096AE2-4FC9-4531-BED3-A8E6FC984BC6}
+	EndGlobalSection
+EndGlobal
