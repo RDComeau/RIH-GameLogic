@@ -3,6 +3,11 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <RootNamespace>RIH_GameLogic</RootNamespace>
+    <PackageProjectUrl>https://github.com/RDComeau/RIH-GameLogic</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/RDComeau/RIH-GameLogic</RepositoryUrl>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <RepositoryUrl>https://github.com/RDComeau/RIH-GameLogic</RepositoryUrl>
+    <Version>1.0.2</Version>
   </PropertyGroup>
 
 </Project>
