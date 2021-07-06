@@ -13,7 +13,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static RIHGameLogic.Models.Enums.Flight;
+using static RIHGameLogic.Models.VersionOne.Enums.Flight;
 
 namespace RIHGameLogic.Test.Services.VersionOne
 {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RIH_GameLogic.Models.VersionOne.Enums
+namespace RIHGameLogic.Models.VersionOne.Enums
 {
     public class DiceRole
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using static RIHGameLogic.Models.Enums.Flight;
+using static RIHGameLogic.Models.VersionOne.Enums.Flight;
 
 namespace RIHGameLogic.Models.VersionOne.Minions.GreaterDemons
 {
