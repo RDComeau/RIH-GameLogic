@@ -12,12 +12,6 @@ namespace RIHGameLogic.Models.VersionOne.Essences
 {
     public class Essences
     {
-        //public int soulOfLightning { get; set; } = Convert.ToInt32(Move.OneInch);
-        //public int poisonedSoul { get; set; } = Convert.ToInt32(Damage.OneExtra);
-        //public int unyieldingEssence { get; set; } = Convert.ToInt32(Life.TwoExtra);
-        //public int skirmishSpirit { get; set; } = Convert.ToInt32(Move.ThreeInches);
-        //public int regeneratingSoul { get; set; } = Convert.ToInt32(Life.OneExtra);
-
         public int soulOfLightning()
         {
             return Convert.ToInt32(Move.OneInch);
@@ -38,6 +32,21 @@ namespace RIHGameLogic.Models.VersionOne.Essences
         public int unyieldingEssence()
         {
             return Convert.ToInt32(Life.TwoExtra);
+        }
+
+        public int explosiveSpirit()
+        {
+            return Convert.ToInt32(Damage.OneDamage);
+        }
+
+        public int skirmishSpirit()
+        {
+            return Convert.ToInt32(Move.ThreeInches);
+        }
+
+        public int regeneratingSoul()
+        {
+            return Convert.ToInt32(Life.OneExtra);
         }
     }
 }
