@@ -14,9 +14,9 @@ namespace RIH_GameLogic.Models.VersionOne.Relics
     {
         public int screamingShield(int possibleDamage)
         {
-            if (possibleDamage < Convert.ToInt32(Damage.TwoDamage))
+            if (possibleDamage < (int)Damage.TwoDamage)
             {
-                return Convert.ToInt32(Damage.NoDamage);
+                return (int)Damage.NoDamage;
             }
             else
             {
@@ -26,18 +26,18 @@ namespace RIH_GameLogic.Models.VersionOne.Relics
 
         public int infernaalArmor(int incomingDamage)
         {
-            return incomingDamage - Convert.ToInt32(Damage.OneDamage);
+            return incomingDamage - (int)Damage.OneDamage;
         }
 
         public int hammerOfThunder(int diceRole)
         {
-            if (diceRole == Convert.ToInt32(NaturalRole.D6))
+            if (diceRole == (int)NaturalRole.D6)
             {
-                return Convert.ToInt32(Damage.TwoDamage);
+                return (int)Damage.TwoDamage;
             }
             else
             {
-                return Convert.ToInt32(Damage.NoDamage);
+                return (int)Damage.NoDamage;
             }
         }
 
@@ -48,9 +48,9 @@ namespace RIH_GameLogic.Models.VersionOne.Relics
 
         public int plateOfRimeIce(int DefenseRoll, int movement)
         {
-            if (DefenseRoll == Convert.ToInt32(NaturalRole.D6))
+            if (DefenseRoll == (int)NaturalRole.D6)
             {
-                return Convert.ToInt32(Move.None);
+                return (int)Move.None;
             }
             else
             {

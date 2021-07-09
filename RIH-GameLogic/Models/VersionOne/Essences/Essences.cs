@@ -14,39 +14,39 @@ namespace RIHGameLogic.Models.VersionOne.Essences
     {
         public int soulOfLightning()
         {
-            return Convert.ToInt32(Move.OneInch);
+            return (int)Move.OneInch;
         }
 
         public int poisonedSoul(int naturalDiceRole)
         {
-            if (naturalDiceRole == Convert.ToInt32(NaturalRole.D6))
+            if (naturalDiceRole == (int)NaturalRole.D6)
             {
-                return Convert.ToInt32(Damage.TwoDamage);
+                return (int)Damage.TwoDamage;
             }
             else
             {
-                return Convert.ToInt32(Damage.NoDamage);
+                return (int)Damage.NoDamage;
             }
         }
 
         public int unyieldingEssence()
         {
-            return Convert.ToInt32(Life.TwoExtra);
+            return (int)Life.TwoExtra;
         }
 
         public int explosiveSpirit()
         {
-            return Convert.ToInt32(Damage.OneDamage);
+            return (int)Damage.OneDamage;
         }
 
         public int skirmishSpirit()
         {
-            return Convert.ToInt32(Move.ThreeInches);
+            return (int)Move.ThreeInches;
         }
 
         public int regeneratingSoul()
         {
-            return Convert.ToInt32(Life.OneExtra);
+            return (int)Life.OneExtra;
         }
     }
 }
