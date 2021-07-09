@@ -1,4 +1,4 @@
-﻿using RIHGameLogic.Models.Enums;
+﻿using RIHGameLogic.Models.VersionOne.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
