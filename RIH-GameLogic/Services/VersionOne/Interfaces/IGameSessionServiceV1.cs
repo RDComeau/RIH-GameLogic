@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace RIH_GameLogic.Services.VersionOne.Interfaces
 {
-    public class IGameSessionServiceV1
+    public interface IGameSessionServiceV1
     {
+        public Guid CreateNewSession();
     }
 }

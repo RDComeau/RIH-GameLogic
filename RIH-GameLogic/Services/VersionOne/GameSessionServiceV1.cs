@@ -9,9 +9,14 @@ namespace RIH_GameLogic.Services.VersionOne
 {
     public class GameSessionServiceV1 : IGameSessionServiceV1
     {
+        public GameSessionServiceV1()
+        {
+
+        }
+
         public Guid CreateNewSession()
         {
-            return Guid.NewGuid();
+            throw new NotImplementedException();
         }
     }
 }
