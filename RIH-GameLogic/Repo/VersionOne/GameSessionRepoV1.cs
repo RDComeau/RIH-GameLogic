@@ -73,7 +73,7 @@ namespace RIH_GameLogic.Repo.VersionOne
                 userName = reader.GetString(index++),
                 access = reader.GetBoolean(index++),
                 defualtRules = reader.GetBoolean(index++),
-                identifier = reader.GetGuid(index++),
+                identifier = reader.GetGuid(index++).ToString(),
                 sessionName = reader.GetString(index)
             };
         }

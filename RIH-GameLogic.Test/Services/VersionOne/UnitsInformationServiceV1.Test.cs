@@ -1,31 +1,31 @@
 ﻿using KellermanSoftware.CompareNetObjects;
 using NUnit.Framework;
-using RIHGameLogic.Models.VersionOne;
-using RIHGameLogic.Models.VersionOne.Devouts;
-using RIHGameLogic.Models.VersionOne.Leaders;
-using RIHGameLogic.Models.VersionOne.Minions.GreaterDemons;
-using RIHGameLogic.Models.VersionOne.Minions.LesserDemons;
-using RIHGameLogic.Models.VersionOne.Minions.SuperiorDemons;
-using RIHGameLogic.Services.VersionOne;
-using RIHGameLogic.Services.VersionOne.Interfaces;
+using RIH_GameLogic.Models.VersionOne;
+using RIH_GameLogic.Models.VersionOne.Devouts;
+using RIH_GameLogic.Models.VersionOne.Leaders;
+using RIH_GameLogic.Models.VersionOne.Minions.GreaterDemons;
+using RIH_GameLogic.Models.VersionOne.Minions.LesserDemons;
+using RIH_GameLogic.Models.VersionOne.Minions.SuperiorDemons;
+using RIH_GameLogic.Services.VersionOne;
+using RIH_GameLogic.Services.VersionOne.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static RIHGameLogic.Models.VersionOne.Enums.Flight;
+using static RIH_GameLogic.Models.VersionOne.Enums.Flight;
 
-namespace RIHGameLogic.Test.Services.VersionOne
+namespace RIH_GameLogic.Test.Services.VersionOne
 {
     [TestFixture]
     public class UnitsInformationServiceTest
     {
-        private UnitsInformationServiceV1 _unitsInformationService = new UnitsInformationServiceV1();
+        private UnitsInformationServiceV1 _service;
 
         [SetUp]
         public void setup()
         {
-            //_unitsInformationService 
+            _service = new UnitsInformationServiceV1();
         }
 
         #region Leaders
@@ -45,9 +45,9 @@ namespace RIHGameLogic.Test.Services.VersionOne
             };
 
             //Act
-            Warrior acutualUnit = _unitsInformationService.GetWarriorInformation();
+            Warrior acutualUnit = _service.GetWarriorInformation();
 
-            //Asert
+            //Assert
             CompareLogic compare = new CompareLogic();
             ComparisonResult compareResult = compare.Compare(expectedUnit, acutualUnit);
             Assert.IsTrue(compareResult.AreEqual, compareResult.DifferencesString);
@@ -69,7 +69,7 @@ namespace RIHGameLogic.Test.Services.VersionOne
             };
 
             //Act
-            Schemer actualUnit = _unitsInformationService.GetSchemerInformation();
+            Schemer actualUnit = _service.GetSchemerInformation();
 
             //Assert
             CompareLogic compare = new CompareLogic();
@@ -93,7 +93,7 @@ namespace RIHGameLogic.Test.Services.VersionOne
             };
 
             //Act
-            Zealot actualUnit = _unitsInformationService.GetZealotInformation();
+            Zealot actualUnit = _service.GetZealotInformation();
 
             //Assert
             CompareLogic compare = new CompareLogic();
@@ -146,7 +146,7 @@ namespace RIHGameLogic.Test.Services.VersionOne
             };
 
             //Act
-            List<BaseUnit> actualUnits = _unitsInformationService.GetAllLeadersInformation();
+            List<BaseUnit> actualUnits = _service.GetAllLeadersInformation();
 
             //Assert
             CompareLogic compare = new CompareLogic();
@@ -172,7 +172,7 @@ namespace RIHGameLogic.Test.Services.VersionOne
             };
 
             //Act
-            LordOfThePit actualUnit = _unitsInformationService.GetLordOfThePitInformation();
+            LordOfThePit actualUnit = _service.GetLordOfThePitInformation();
 
             //Assert
             CompareLogic compare = new CompareLogic();
@@ -196,7 +196,7 @@ namespace RIHGameLogic.Test.Services.VersionOne
             };
 
             //Act
-            Executioner actualUnit = _unitsInformationService.GetExecutionerInformation();
+            Executioner actualUnit = _service.GetExecutionerInformation();
 
             //Assert
             CompareLogic compare = new CompareLogic();
@@ -220,7 +220,7 @@ namespace RIHGameLogic.Test.Services.VersionOne
             };
 
             //Act
-            MadnessDemon actualUnit = _unitsInformationService.GetMadnessDemonInformation();
+            MadnessDemon actualUnit = _service.GetMadnessDemonInformation();
 
             //Assert
             CompareLogic compare = new CompareLogic();
@@ -244,7 +244,7 @@ namespace RIHGameLogic.Test.Services.VersionOne
             };
 
             //Act
-            Tallyman actualUnit = _unitsInformationService.GetTallymanInformation();
+            Tallyman actualUnit = _service.GetTallymanInformation();
 
             //Assert
             CompareLogic compare = new CompareLogic();
@@ -268,7 +268,7 @@ namespace RIHGameLogic.Test.Services.VersionOne
             };
 
             //Act
-            Succubus actualUnit = _unitsInformationService.GetSuccubusInformation();
+            Succubus actualUnit = _service.GetSuccubusInformation();
 
             //Assert
             CompareLogic compare = new CompareLogic();
@@ -292,7 +292,7 @@ namespace RIHGameLogic.Test.Services.VersionOne
             };
 
             //Act
-            VoidDemon actualUnit = _unitsInformationService.GetVoidDemonInformation();
+            VoidDemon actualUnit = _service.GetVoidDemonInformation();
 
             //Assert
             CompareLogic compare = new CompareLogic();
@@ -381,7 +381,7 @@ namespace RIHGameLogic.Test.Services.VersionOne
             };
 
             //Act
-            List<BaseUnit> actualUnits = _unitsInformationService.GetAllDevoutsInformation();
+            List<BaseUnit> actualUnits = _service.GetAllDevoutsInformation();
 
             //Assert
             CompareLogic compare = new CompareLogic();
@@ -407,7 +407,7 @@ namespace RIHGameLogic.Test.Services.VersionOne
             };
 
             //Act
-            SlaughterFiend actualUnit = _unitsInformationService.GetSlaughterFiendInformation();
+            SlaughterFiend actualUnit = _service.GetSlaughterFiendInformation();
 
             //Assert
             CompareLogic compare = new CompareLogic();
@@ -431,7 +431,7 @@ namespace RIHGameLogic.Test.Services.VersionOne
             };
 
             //Act
-            Mephit actualUnit = _unitsInformationService.GetMephitInformation();
+            Mephit actualUnit = _service.GetMephitInformation();
 
             //Assert
             CompareLogic compare = new CompareLogic();
@@ -455,7 +455,7 @@ namespace RIHGameLogic.Test.Services.VersionOne
             };
 
             //Act
-            TentacleBeast actualUnit = _unitsInformationService.GetTentacleBeastInformation();
+            TentacleBeast actualUnit = _service.GetTentacleBeastInformation();
 
             //Assert
             CompareLogic compare = new CompareLogic();
@@ -479,7 +479,7 @@ namespace RIHGameLogic.Test.Services.VersionOne
             };
 
             //Act
-            ArmoredDemon actualUnit = _unitsInformationService.GetArmoredDemonInformation();
+            ArmoredDemon actualUnit = _service.GetArmoredDemonInformation();
 
             //Assert
             CompareLogic compare = new CompareLogic();
@@ -503,7 +503,7 @@ namespace RIHGameLogic.Test.Services.VersionOne
             };
 
             //Act
-            SpinedDemon actualUnit = _unitsInformationService.GetSpinedDemonInformation();
+            SpinedDemon actualUnit = _service.GetSpinedDemonInformation();
 
             //Assert
             CompareLogic compare = new CompareLogic();
@@ -527,7 +527,7 @@ namespace RIHGameLogic.Test.Services.VersionOne
             };
 
             //Act
-            CorpulentDemon actualUnit = _unitsInformationService.GetCorpulentDemonInformation();
+            CorpulentDemon actualUnit = _service.GetCorpulentDemonInformation();
 
             //Assert
             CompareLogic compare = new CompareLogic();
@@ -616,7 +616,7 @@ namespace RIHGameLogic.Test.Services.VersionOne
             };
 
             //Act
-            List<BaseUnit> actualUnits = _unitsInformationService.GetAllLesserDemonsInformation();
+            List<BaseUnit> actualUnits = _service.GetAllLesserDemonsInformation();
 
             //Assert
             CompareLogic compare = new CompareLogic();
@@ -642,7 +642,7 @@ namespace RIHGameLogic.Test.Services.VersionOne
             };
 
             //Act
-            TortureMaster actualUnit = _unitsInformationService.GetTortureMasterInformation();
+            TortureMaster actualUnit = _service.GetTortureMasterInformation();
 
             //Assert
             CompareLogic compare = new CompareLogic();
@@ -666,7 +666,7 @@ namespace RIHGameLogic.Test.Services.VersionOne
             };
 
             //Act
-            SerpentKnight actualUnit = _unitsInformationService.GetSerpentKnightInformation();
+            SerpentKnight actualUnit = _service.GetSerpentKnightInformation();
 
             //Assert
             CompareLogic compare = new CompareLogic();
@@ -690,7 +690,7 @@ namespace RIHGameLogic.Test.Services.VersionOne
             };
 
             //Act
-            MarquessDWinter actualUnit = _unitsInformationService.GetMarquessDWinterInformation();
+            MarquessDWinter actualUnit = _service.GetMarquessDWinterInformation();
 
             //Assert
             CompareLogic compare = new CompareLogic();
@@ -743,7 +743,7 @@ namespace RIHGameLogic.Test.Services.VersionOne
             };
 
             //Act
-            List<BaseUnit> actualUnits = _unitsInformationService.GetAllGreaterDemonsInformation();
+            List<BaseUnit> actualUnits = _service.GetAllGreaterDemonsInformation();
 
             //Assert
             CompareLogic compare = new CompareLogic();
@@ -769,7 +769,7 @@ namespace RIHGameLogic.Test.Services.VersionOne
             };
 
             //Act
-            ShadowKing actualUnit = _unitsInformationService.GetShadowKingInformation();
+            ShadowKing actualUnit = _service.GetShadowKingInformation();
 
             //Assert
             CompareLogic compare = new CompareLogic();
@@ -793,7 +793,7 @@ namespace RIHGameLogic.Test.Services.VersionOne
             };
 
             //Act
-            LordOfFlame actualUnit = _unitsInformationService.GetLordOfFlameInformation();
+            LordOfFlame actualUnit = _service.GetLordOfFlameInformation();
 
             //Assert
             CompareLogic compare = new CompareLogic();
@@ -817,7 +817,7 @@ namespace RIHGameLogic.Test.Services.VersionOne
             };
 
             //Act
-            VenomQueen actualUnit = _unitsInformationService.GetVenomQueenInformation();
+            VenomQueen actualUnit = _service.GetVenomQueenInformation();
 
             //Assert
             CompareLogic compare = new CompareLogic();
@@ -870,7 +870,7 @@ namespace RIHGameLogic.Test.Services.VersionOne
             };
 
             //Act
-            List<BaseUnit> actualUnits = _unitsInformationService.GetAllSuperiorDemons();
+            List<BaseUnit> actualUnits = _service.GetAllSuperiorDemonsInformation();
 
             //Assert
             CompareLogic compare = new CompareLogic();
@@ -1099,7 +1099,7 @@ namespace RIHGameLogic.Test.Services.VersionOne
             };
 
             //Act
-            List<BaseUnit> actualUnits = _unitsInformationService.GetAllUnitsInformation();
+            List<BaseUnit> actualUnits = _service.GetAllUnitsInformation();
 
             //Assert
             CompareLogic compare = new CompareLogic();

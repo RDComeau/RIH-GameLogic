@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace RIHGameLogic.Models.VersionOne.Enums
+namespace RIH_GameLogic.Models.VersionOne.Enums
 {
     public class Flight
     {

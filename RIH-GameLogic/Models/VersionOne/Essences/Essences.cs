@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static RIHGameLogic.Models.VersionOne.Enums.Movement;
-using static RIHGameLogic.Models.VersionOne.Enums.Combat;
-using static RIHGameLogic.Models.VersionOne.Enums.Health;
-using static RIHGameLogic.Models.VersionOne.Enums.DiceRole;
+using static RIH_GameLogic.Models.VersionOne.Enums.Movement;
+using static RIH_GameLogic.Models.VersionOne.Enums.Combat;
+using static RIH_GameLogic.Models.VersionOne.Enums.Health;
+using static RIH_GameLogic.Models.VersionOne.Enums.DiceRole;
 
-namespace RIHGameLogic.Models.VersionOne.Essences
+namespace RIH_GameLogic.Models.VersionOne.Essences
 {
     public class Essences
     {

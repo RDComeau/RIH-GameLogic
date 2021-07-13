@@ -1,10 +1,10 @@
-﻿using RIHGameLogic.Models.VersionOne.Enums;
+﻿using RIH_GameLogic.Models.VersionOne.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace RIHGameLogic.Models.VersionOne
+namespace RIH_GameLogic.Models.VersionOne
 {
     public abstract class BaseUnit
     {

@@ -1,14 +1,15 @@
-﻿using RIHGameLogic.Models.VersionOne;
-using RIHGameLogic.Models.VersionOne.Devouts;
-using RIHGameLogic.Models.VersionOne.Leaders;
-using RIHGameLogic.Models.VersionOne.Minions.GreaterDemons;
-using RIHGameLogic.Models.VersionOne.Minions.LesserDemons;
-using RIHGameLogic.Models.VersionOne.Minions.SuperiorDemons;
+﻿using RIH_GameLogic.Models.VersionOne;
+using RIH_GameLogic.Models.VersionOne.Devouts;
+using RIH_GameLogic.Models.VersionOne.Leaders;
+using RIH_GameLogic.Models.VersionOne.Minions.GreaterDemons;
+using RIH_GameLogic.Models.VersionOne.Minions.LesserDemons;
+using RIH_GameLogic.Models.VersionOne.Minions.SuperiorDemons;
+using RIH_GameLogic.Services.VersionOne.Interfaces;
 using System.Collections.Generic;
 
-namespace RIHGameLogic.Services.VersionOne
+namespace RIH_GameLogic.Services.VersionOne
 {
-    public class UnitsInformationServiceV1 
+    public class UnitsInformationServiceV1 : IUnitsInformationServiceV1
     {
         public UnitsInformationServiceV1()
         {
@@ -175,7 +176,7 @@ namespace RIHGameLogic.Services.VersionOne
             return new VenomQueen();
         }
 
-        public List<BaseUnit> GetAllSuperiorDemons()
+        public List<BaseUnit> GetAllSuperiorDemonsInformation()
         {
             return new List<BaseUnit>()
             {
@@ -194,7 +195,7 @@ namespace RIHGameLogic.Services.VersionOne
             allUnits.AddRange(GetAllDevoutsInformation());
             allUnits.AddRange(GetAllLesserDemonsInformation());
             allUnits.AddRange(GetAllGreaterDemonsInformation());
-            allUnits.AddRange(GetAllSuperiorDemons());
+            allUnits.AddRange(GetAllSuperiorDemonsInformation());
 
             return allUnits;
         }

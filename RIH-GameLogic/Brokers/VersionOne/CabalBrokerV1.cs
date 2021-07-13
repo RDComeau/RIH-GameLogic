@@ -1,5 +1,5 @@
 ﻿using RIH_GameLogic.Brokers.VersionOne.Interfaces;
-using RIHGameLogic.Models.VersionOne;
+using RIH_GameLogic.Models.VersionOne;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +12,7 @@ namespace RIH_GameLogic.Brokers.VersionOne
     {
         public CabalBrokerV1()
         {
-
+            
         }
 
         public List<BaseUnit> CreateCabal()

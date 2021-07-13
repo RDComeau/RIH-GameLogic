@@ -1,11 +1,10 @@
-﻿using RIHGameLogic.Models.Enums;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using static RIHGameLogic.Models.Enums.Flight;
+using static RIH_GameLogic.Models.VersionOne.Enums.Flight;
 
-namespace RIHGameLogic.Models.VersionOne.Leaders
+namespace RIH_GameLogic.Models.VersionOne.Leaders
 {
     public class Warrior : BaseUnit
     {

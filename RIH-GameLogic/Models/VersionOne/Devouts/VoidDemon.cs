@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using static RIHGameLogic.Models.Enums.Flight;
+using static RIH_GameLogic.Models.VersionOne.Enums.Flight;
 
-namespace RIHGameLogic.Models.VersionOne.Devouts
+namespace RIH_GameLogic.Models.VersionOne.Devouts
 {
     public class VoidDemon : BaseUnit
     {

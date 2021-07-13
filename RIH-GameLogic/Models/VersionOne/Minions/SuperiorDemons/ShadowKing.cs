@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using static RIHGameLogic.Models.VersionOne.Enums.Flight;
+using static RIH_GameLogic.Models.VersionOne.Enums.Flight;
 
-namespace RIHGameLogic.Models.VersionOne.Minions.SuperiorDemons
+namespace RIH_GameLogic.Models.VersionOne.Minions.SuperiorDemons
 {
     public class ShadowKing : BaseUnit
     {

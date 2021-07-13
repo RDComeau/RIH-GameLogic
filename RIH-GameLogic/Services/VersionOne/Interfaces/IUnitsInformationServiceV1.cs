@@ -1,15 +1,15 @@
-﻿using RIHGameLogic.Models.VersionOne;
-using RIHGameLogic.Models.VersionOne.Devouts;
-using RIHGameLogic.Models.VersionOne.Leaders;
-using RIHGameLogic.Models.VersionOne.Minions.GreaterDemons;
-using RIHGameLogic.Models.VersionOne.Minions.LesserDemons;
-using RIHGameLogic.Models.VersionOne.Minions.SuperiorDemons;
+﻿using RIH_GameLogic.Models.VersionOne;
+using RIH_GameLogic.Models.VersionOne.Devouts;
+using RIH_GameLogic.Models.VersionOne.Leaders;
+using RIH_GameLogic.Models.VersionOne.Minions.GreaterDemons;
+using RIH_GameLogic.Models.VersionOne.Minions.LesserDemons;
+using RIH_GameLogic.Models.VersionOne.Minions.SuperiorDemons;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace RIHGameLogic.Services.VersionOne.Interfaces
+namespace RIH_GameLogic.Services.VersionOne.Interfaces
 {
     public interface IUnitsInformationServiceV1
     {
@@ -38,7 +38,7 @@ namespace RIHGameLogic.Services.VersionOne.Interfaces
         public ShadowKing GetShadowKingInformation();
         public LordOfFlame GetLordOfFlameInformation();
         public VenomQueen GetVenomQueenInformation();
-        public List<BaseUnit> GetAllSuperiorDemons();
+        public List<BaseUnit> GetAllSuperiorDemonsInformation();
         public List<BaseUnit> GetAllUnitsInformation();
     }
 }

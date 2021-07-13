@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RIHGameLogic.Models.VersionOne.Enums
+namespace RIH_GameLogic.Models.VersionOne.Enums
 {
     public class Movement
     {

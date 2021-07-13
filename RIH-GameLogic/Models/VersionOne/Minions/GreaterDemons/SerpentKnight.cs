@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using static RIHGameLogic.Models.VersionOne.Enums.Flight;
+using static RIH_GameLogic.Models.VersionOne.Enums.Flight;
 
-namespace RIHGameLogic.Models.VersionOne.Minions.GreaterDemons
+namespace RIH_GameLogic.Models.VersionOne.Minions.GreaterDemons
 {
     public class SerpentKnight : BaseUnit
     {
