@@ -24,7 +24,7 @@ namespace RIH_GameLogic.Test.Brokers.VersionOne
         Mock<IUnitsInformationServiceV1> _servie;
 
         [SetUp]
-        public void setup()
+        public void Setup()
         {
             _servie = new Mock<IUnitsInformationServiceV1>();
             _broker = new UnitsInformationBrokerV1(_servie.Object);

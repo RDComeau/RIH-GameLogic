@@ -1,4 +1,5 @@
 ﻿using RIH_GameLogic.Models.VersionOne;
+using RIH_GameLogic.Models.VersionOne.Requests;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,8 +10,11 @@ namespace RIH_GameLogic.Repo.VersionOne.Interfaces
 {
     public interface IGameSessionRepoV1
     {
-        public void CreateNewDefualtSessioin(GameSession session);
-        public GameSession SelectGameByGuid(string gameId);
-        public void DeleteGameByGuid(string gameId);
+        public GameSession CreateNewSession(GameSessionAddRequest createSession);
+        public GameSession SelectGame(int id);
+        public GameSession SelectGame(int id, int creatorCabalId);
+        public GameSession SelectGame(int id, int creatorCabalId, int acceptorCabalId);
+        public GameSession AcceptGame(GameSessionAddCabalRequest acceptSession);
+        public void DeleteGame(GameSessionDeleteRequest deleteGame);
     }
 }

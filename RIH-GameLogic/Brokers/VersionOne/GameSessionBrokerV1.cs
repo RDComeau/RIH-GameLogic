@@ -1,5 +1,6 @@
 ﻿using RIH_GameLogic.Brokers.VersionOne.Interfaces;
 using RIH_GameLogic.Models.VersionOne;
+using RIH_GameLogic.Models.VersionOne.Requests;
 using RIH_GameLogic.Services.VersionOne.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -19,26 +20,41 @@ namespace RIH_GameLogic.Brokers.VersionOne
             _service = service;
         }
 
-        public GameSession NewGameSession(GameSession session)
+        public GameSession NewGameSession(GameSessionAddRequest createSession)
         {
-            if (session.defualtRules == Convert.ToBoolean(DefualtRules.No))
+            if (createSession.defaultRules == Convert.ToBoolean(DefualtRules.No))
             {
-                throw new NotImplementedException();
+                return _service.CreateNewUniqueSession(createSession);
             }
             else
             {
-                return _service.CreateNewDefualtSession(session);
+                return _service.CreateNewDefualtSession(createSession);
             }
         }
 
-        public GameSession SelectGameSessionByGuid(string gameGuid)
+        public GameSession SelectGameSession(int id)
         {
-            return _service.SelectGameByGuid(gameGuid);
+            return _service.SelectGame(id);
         }
 
-        public void DeleteGameSessionByGuid(string gameGuid)
+        public GameSession SelectGameSession(int id, int creatorCabalId)
         {
-            _service.DeleteGameByGuid(gameGuid);
+            return _service.SelectGame(id, creatorCabalId);
+        }
+
+        public GameSession SelectGameSession(int id, int creatorCabalId, int acceptorCabalId)
+        {
+            return _service.SelectGame(id, creatorCabalId, acceptorCabalId);
+        }
+
+        public GameSession AcceptGame(GameSessionAddCabalRequest acceptSession)
+        {
+            return _service.AcceptGame(acceptSession);
+        }
+
+        public void DeleteGameSession(GameSessionDeleteRequest deleteGame)
+        {
+            _service.DeleteGame(deleteGame);
         }
     }
 }

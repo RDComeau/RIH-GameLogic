@@ -23,7 +23,7 @@ namespace RIH_GameLogic.Test.Services.VersionOne
         private UnitsInformationServiceV1 _service;
 
         [SetUp]
-        public void setup()
+        public void Setup()
         {
             _service = new UnitsInformationServiceV1();
         }

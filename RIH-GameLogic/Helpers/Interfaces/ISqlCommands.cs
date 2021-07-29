@@ -8,9 +8,11 @@ namespace RIH_GameLogic.Helpers.Interfaces
 {
     public interface ISqlCommands
     {
-        public string NewGame(string userName, bool access, bool defaultGame,
-                string sessionGuid, string sessionName, string sessionCreatorId);
-        public string SelectGameByGuid(string sessionGuid);
-        public string DeleteGameByGuid(string gameGuid);
+        public string NewGameSessionV1();
+        public string SelectGameBySessionIdV1();
+        public string SelectGameBySessionIdAndCabalIdV1();
+        public string SelectGameBySessionIdAndCabalsIdV1();
+        public string AcceptGameV1();
+        public string DeleteGameV1();
     }
 }

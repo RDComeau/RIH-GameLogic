@@ -1,4 +1,5 @@
 ﻿using RIH_GameLogic.Models.VersionOne;
+using RIH_GameLogic.Models.VersionOne.Requests;
 using RIH_GameLogic.Repo.VersionOne.Interfaces;
 using RIH_GameLogic.Services.VersionOne.Interfaces;
 using System;
@@ -18,21 +19,39 @@ namespace RIH_GameLogic.Services.VersionOne
             _repo = repo;
         }
 
-        public GameSession CreateNewDefualtSession(GameSession session)
+        public GameSession CreateNewDefualtSession(GameSessionAddRequest createSession)
         {
-            session.identifier = Guid.NewGuid().ToString();
-            _repo.CreateNewDefualtSessioin(session);
-            return session;
+            return _repo.CreateNewSession(createSession);
         }
 
-        public GameSession SelectGameByGuid(string gameGuid)
+        public GameSession CreateNewUniqueSession(GameSessionAddRequest createSession)
         {
-            return  _repo.SelectGameByGuid(gameGuid);
+            return _repo.CreateNewSession(createSession);
         }
 
-        public void DeleteGameByGuid(string gameGuid)
+        public GameSession SelectGame(int id)
         {
-            _repo.DeleteGameByGuid(gameGuid);
+            return _repo.SelectGame(id);
+        }
+
+        public GameSession SelectGame(int id, int creatorCabalId)
+        {
+            return _repo.SelectGame(id, creatorCabalId);
+        }
+
+        public GameSession SelectGame(int id, int creatorCabalId, int acceptorCabalId)
+        {
+            return _repo.SelectGame(id, creatorCabalId, acceptorCabalId);
+        }
+
+        public GameSession AcceptGame(GameSessionAddCabalRequest acceptSession)
+        {
+            return _repo.AcceptGame(acceptSession);
+        }
+
+        public void DeleteGame(GameSessionDeleteRequest deleteGame)
+        {
+            _repo.DeleteGame(deleteGame);
         }
     }
 }
