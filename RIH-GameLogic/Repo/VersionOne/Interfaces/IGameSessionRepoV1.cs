@@ -10,11 +10,12 @@ namespace RIH_GameLogic.Repo.VersionOne.Interfaces
 {
     public interface IGameSessionRepoV1
     {
-        public GameSession CreateNewSession(GameSessionAddRequest createSession);
+        public GameSession CreateNewSessionWithoutCabal(GameSessionAddRequest createSession);
+        public GameSession CreateNewSessionWithCabal(GameSessionAddRequest createSession);
         public GameSession SelectGame(int id);
         public GameSession SelectGame(int id, int creatorCabalId);
         public GameSession SelectGame(int id, int creatorCabalId, int acceptorCabalId);
-        public GameSession AcceptGame(GameSessionAddCabalRequest acceptSession);
+        public GameSession AcceptGame(GameSessionAddRequest acceptSession);
         public void DeleteGame(GameSessionDeleteRequest deleteGame);
     }
 }

@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static RIH_GameLogic.Models.VersionOne.Enums.Rules;
 
 namespace RIH_GameLogic.Services.VersionOne
 {
@@ -19,14 +20,13 @@ namespace RIH_GameLogic.Services.VersionOne
             _repo = repo;
         }
 
-        public GameSession CreateNewDefualtSession(GameSessionAddRequest createSession)
+        public GameSession CreateSession(GameSessionAddRequest createSession)
         {
-            return _repo.CreateNewSession(createSession);
-        }
-
-        public GameSession CreateNewUniqueSession(GameSessionAddRequest createSession)
-        {
-            return _repo.CreateNewSession(createSession);
+            if (createSession.sessionCreatorCabalId.Equals(0))
+            {
+                return _repo.CreateNewSessionWithoutCabal(createSession);
+            }
+            return _repo.CreateNewSessionWithCabal(createSession);
         }
 
         public GameSession SelectGame(int id)
@@ -44,7 +44,7 @@ namespace RIH_GameLogic.Services.VersionOne
             return _repo.SelectGame(id, creatorCabalId, acceptorCabalId);
         }
 
-        public GameSession AcceptGame(GameSessionAddCabalRequest acceptSession)
+        public GameSession AcceptGame(GameSessionAddRequest acceptSession)
         {
             return _repo.AcceptGame(acceptSession);
         }

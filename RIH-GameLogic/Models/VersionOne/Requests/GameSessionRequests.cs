@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace RIH_GameLogic.Models.VersionOne.Requests
+﻿namespace RIH_GameLogic.Models.VersionOne.Requests
 {
     public class GameSessionAddRequest
     {
@@ -13,10 +7,6 @@ namespace RIH_GameLogic.Models.VersionOne.Requests
         public bool defaultRules { get; set; }
         public string playorId { get; set; }
         public string cabalName { get; set; }
-    }
-
-    public class GameSessionAddCabalRequest : GameSessionAddRequest
-    {
         public int sessionId { get; set; }
         public int sessionCreatorCabalId { get; set; }
     }

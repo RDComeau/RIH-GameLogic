@@ -1,4 +1,5 @@
 ﻿using RIH_GameLogic.Models.VersionOne;
+using RIH_GameLogic.Models.VersionOne.Requests;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,6 @@ namespace RIH_GameLogic.Repo.VersionOne.Interfaces
 {
     public interface ICabalRepoV1
     {
-        public Cabal CreateCabalInSQL(List<BaseUnit> newCabal);
+        public Cabal CreateCabal(CabalAddRequests cabalAddRequests);
     }
 }

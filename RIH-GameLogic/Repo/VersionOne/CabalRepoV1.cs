@@ -1,6 +1,8 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
+using RIH_GameLogic.Helpers.Interfaces;
 using RIH_GameLogic.Models.VersionOne;
+using RIH_GameLogic.Models.VersionOne.Requests;
 using RIH_GameLogic.Repo.VersionOne.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -14,24 +16,24 @@ namespace RIH_GameLogic.Repo.VersionOne
 {
     public class CabalRepoV1 : ICabalRepoV1
     {
-        IConfiguration _config;
+        private IConfigHelper _configHelper;
 
-        public CabalRepoV1(IConfiguration config)
+        public CabalRepoV1(IConfigHelper configHelper)
         {
-            _config = config;
+            _configHelper = configHelper;
         }
 
-        public Cabal CreateCabalInSQL(List<BaseUnit> newCabal)
+        public Cabal CreateCabal(CabalAddRequests cabalAddRequests)
         {
             Cabal cabal = null;
-            using (SqlConnection connection = new SqlConnection(""))
+            using (SqlConnection connection = new SqlConnection(_configHelper.RIHConnectionString()))
             {
-                SqlCommand command = new SqlCommand("commandString", connection);
-                command.Connection.Open();
-                SqlParameter cabalParameter = command.Parameters.AddWithValue("", newCabal);
-                cabalParameter.SqlDbType = SqlDbType.Structured;
+                connection.Open();
 
-                command.ExecuteReader();
+                SqlCommand command = new SqlCommand(_configHelper.CreateNewCabal(), connection) { CommandType = CommandType.StoredProcedure };
+                command.Parameters.AddWithValue("@CabalName", cabalAddRequests.name);
+                command.Parameters.AddWithValue("@PlayorId", cabalAddRequests.playorId);
+                command.Parameters.AddWithValue("@DefaultRules", cabalAddRequests.defaultRules);
 
                 SqlDataReader reader = command.ExecuteReader();
 
@@ -51,7 +53,9 @@ namespace RIH_GameLogic.Repo.VersionOne
             return new Cabal()
             {
                 id = reader.GetInt32(index++),
-                units = JsonConvert.DeserializeObject<List<BaseUnit>>(reader.GetString(index++)),
+                name = reader.GetString(index++),
+                defaultRules = reader.GetBoolean(index++),
+                playorId = reader.GetString(index++),
                 dateCreated = reader.GetDateTime(index++),
                 dateModified = reader.GetDateTime(index)
             };

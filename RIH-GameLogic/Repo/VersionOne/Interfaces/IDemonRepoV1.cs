@@ -6,10 +6,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RIH_GameLogic.Services.VersionOne.Interfaces
+namespace RIH_GameLogic.Repo.VersionOne.Interfaces
 {
-    public interface ICabalServiceV1
+    public interface IDemonRepoV1
     {
-        public Cabal CreateCabal(CabalAddRequests cabalAddRequests);
+        BaseUnit AddDemon(BaseUnit unit);
+        BaseUnit AddDemon(BaseUnit unit, int cabalId);
     }
 }
